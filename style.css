@@ -1,4 +1,9 @@
-            
+:root {
+    --opacity: .90;
+
+    --bkgrd-color-1: #000000;
+    --text-color-1: #ffffff;
+}           
 * {
     margin: 0;
     padding: 0;
@@ -8,14 +13,38 @@
 
 h1 {
     padding: 10px;
-    background-color: black;
-    color: white;
+    background-color: var(--bkgrd-color-1);
+    color: var(--text-color-1);
     text-align: center;
 }
 
-.searchSection, .resultsBox {
-    /* height: 100vh; will center to middle of page */ 
+body {
+    background-image: url(./assets/images/tall_grass.jpg);
+    background-repeat: no-repeat;
+    animation: backgroundAnimation 30s ease infinite;
+}
+
+@keyframes backgroundAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 50% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.searchSection {
+    height: 90vh;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.searchDiv {
+    display: inline-block;
+    opacity: var(--opacity);
+    background-color: var(--text-color-1);
+    text-align: center;
+    border-radius: 2%;
+}
+
+.selectDropdown, .searchButtons, .resultsBox {
+    padding: 10px;
 }
