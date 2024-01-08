@@ -19,18 +19,25 @@
 
     <main>
       <div class="searchSection">
-        <div class="searchInput">
-          <label for="searchBox">Enter the type:</label>
-          <input type="text" id="searchBox" />
+        <div class="searchDiv">
+          <div class="selectDropdown">
+            <label for="selectBox">Select A Type:</label>
+            <select id="selectBox">
+              <option value="">Please choose an option</option>
+              <option value="fire">Fire</option>
+              <option value="water">Water</option>
+              <option value="grass">Grass</option>
+            </select>
+          </div>
+          <div class="searchButtons">
+            <button id="strongBtn">Is Strong Against</button>
+            <button id="weakBtn">Is Weak Against</button>
+          </div>
+          <div class="resultsBox">
+            <div id="text"></div>
+            <div id="images"></div>
+          </div>
         </div>
-        <div class="searchButtons">
-          <button id="strongBtn">Is Strong Against</button>
-          <button id="weakBtn">Is Weak Against</button>
-        </div>
-      </div>
-
-      <div class="resultsBox">
-        <div id="result"></div>
       </div>
     </main>
   </body>
